@@ -17,8 +17,8 @@ function concat(str1, str2) {
 function array(valore) {
   const arrayVuoto = [];
 
-  for (let index = 0; index < arrayVuoto.length; index++) {
-    const valoriCasuali = Math.random() * 101;
+  for (let index = 0; index < 10; index++) {
+    const valoriCasuali = Math.floor.Math.random() * 101;
     arrayVuoto.push(valoriCasuali);
   }
   return arrayVuoto;
@@ -34,12 +34,13 @@ console.log(risultato);
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 const numeri = [1, 2, 3, 4, 5];
-const somma = 0;
+let somma = 0;
 
 numeri.forEach(function (numero) {
   somma += numero;
-  return somma;
 });
+
+console.log(somma);
 
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
@@ -48,18 +49,23 @@ numeri.forEach(function (numero) {
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
-const arrayNumeri = [1, 2, 3, 4, 5];
-function numeri2(n) {
+const arrayNum = [1, 2, 3, 4, 5];
+function numeri2(arrayNumeri, n) {
   const nuovoArray = arrayNumeri.map((numero) => numero + n);
   return nuovoArray;
 }
-const risultato2 = numeri2(arrayNumeri, 10);
+const risultato2 = numeri2(arrayNum, 10);
 console.log(risultato2);
 
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
+const arrayStringhe = ["Federico", "Di", "Presa"];
+function lunghezzaStringa(array) {
+  return array.map((stringa) => stringa.length);
+}
+console.log(lunghezzaStringa(arrayStringhe));
 
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
